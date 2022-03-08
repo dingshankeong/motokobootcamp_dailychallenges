@@ -49,7 +49,7 @@ actor {
   public func capitalize_text(t : Text) : async Text {
     var cap_text: Text = "";
     For (char in t.chars()) {
-      cap_text #= Char.toText(Char.fromNat(Char.toNat32(char) - 32));
+      cap_text #= Char.toText(Char.fromNat32(Char.toNat32(char) - 32));
     return cap_text;
   };
   
