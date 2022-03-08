@@ -79,7 +79,7 @@ actor {
     public func duplicate_character(t : Text) : async Text {
       var text_array: Text = "";
       for (chars in t.chars()) {
-        text_array = Array.append<Text>(array_text,[char]);      
+        text_array := Array.append<Text>(array_text,[char]);      
       };
       
       for (i in Iter.range(1, text_array,size()) {
