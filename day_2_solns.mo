@@ -77,12 +77,19 @@ actor {
 
   // Challenge 8 *
     public func duplicate_character(t : Text) : async Text {
-      var counter: Nat = 0;
+      var text_array: Text = "";
       for (chars in t.chars()) {
+        text_array = Array.append<Text>(array_text,[char]);      
+      };
       
-      }
+      for (i in Iter.range(1, text_array,size()) {
+        for (j in Iter.range(i+1, text_array.size()) {
+          if (text_array[j] == text_array[i]) {
+            return text_array[i];
+          };
+        };
+      };
       return t;
-     
     };
 
   // Challenge 9 *
