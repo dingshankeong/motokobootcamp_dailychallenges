@@ -84,8 +84,8 @@ actor {
       
       for (i in Iter.range(1, text_array,size()) {
         for (j in Iter.range(i+1, text_array.size()) {
-          if (text_array[j] == text_array[i]) {
-            return text_array[i];
+          if (text_array[j-1] == text_array[i-1]) {
+            return text_array[i-1];
           };
         };
       };
