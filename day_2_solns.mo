@@ -101,7 +101,6 @@ actor {
   public func bubble_sort(array: [Nat]) : async [Nat] {
     let array_sorted: [var Nat] = Array.thaw(array);
     var temp: Nat = 0;
-
     for (i in Iter.range(1, array.size())) {
       for (j in Iter.range(1, array.size() - i)) {
         if (array_sorted[j-1] > array_sorted[j]) {
