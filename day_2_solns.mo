@@ -82,7 +82,7 @@ actor {
         text_array := Array.append<Text>(array_text,[char]);      
       };
       
-      for (i in Iter.range(1, text_array,size()) {
+      for (i in Iter.range(1, text_array.size()) {
         for (j in Iter.range(i+1, text_array.size()) {
           if (text_array[j-1] == text_array[i-1]) {
             return text_array[i-1];
