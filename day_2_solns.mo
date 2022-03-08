@@ -85,7 +85,7 @@ actor {
 
   // Challenge 9 *
   public func size_in_bytes(t : Text) : async Blob {
-    return Text.encodeUtf8(t);
+    return (Text.encodeUtf8(t)).size();
   };
 
   // Challenge 10 
