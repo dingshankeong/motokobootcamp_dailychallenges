@@ -78,7 +78,9 @@ actor {
   // Challenge 8 *
     public func duplicate_character(t : Text) : async Text {
       var counter: Nat = 0;
-      for (chars in t.chars()) 
+      for (chars in t.chars()) {
+      
+      }
       return t;
      
     };
