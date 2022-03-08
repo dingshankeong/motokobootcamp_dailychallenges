@@ -11,12 +11,17 @@ import Int "mo:base/Int";
 actor {
   // Challenge 1 
   public func nat_to_nat8(n : Nat) : async Nat8 {
-    return Nat8.fromNat(n);
+    if (n < 256 and n >= 0) {
+      return Nat8.fromNat(n);
+    };
+    else {
+      throw Error.reject("Out of Valid Nat Range");
+      };
   };
 
   // Challenge 2 
   public func max_number_with_n_bits(n : Nat) : async Nat {
-    return 2**n;
+    return 2**n - 1;
   };
 
   // Challenge 3 *
@@ -29,7 +34,7 @@ actor {
       temp /= 2;
     };
     temp_array := Array.append<Nat>(temp_array, [temp]);
-    for (values in Iter.range(1,temp_array.size())) {
+    for (values in Iter.revRange(1,temp_array.size())) {
       string #= Nat.toText(temp_array[values-1]);
     };
     return string;
@@ -42,7 +47,10 @@ actor {
 
   // Challenge 5 
   public func capitalize_text(t : Text) : async Text {
-    return Text.fromChar(Char.fromNat32(Char.toNat32(t.chars()) - 32));
+    var cap_text: Text = "";
+    For (char in t.chars()) {
+      cap_text #= Char.toText(Char.fromNat(Char.toNat32(char) - 32));
+    return cap_text;
   };
   
   // Challenge 6 
