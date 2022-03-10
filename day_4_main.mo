@@ -1,4 +1,5 @@
-import Cat "custom";
+import Cat "custom"; 
+import Animal "animal";  
 
 actor {
   // Challenge 1 *
@@ -13,6 +14,12 @@ actor {
     return myCat.breed;
   };
   
+  // Challenge 2 
+  public type Animal = Animal.animal;
+  let animal : Cat = {
+    species = "lion";
+    energy = 75;
+  };
   
 
 };
