@@ -71,7 +71,7 @@ module {
         case (?(h, t)) { rec(t, ?(h, r)) };
       }
     };
-    rec(l, null)
+    rec(l, null);
   };
 
 }    
